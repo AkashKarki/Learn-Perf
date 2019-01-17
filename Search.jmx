@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Search" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.2.1.386. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="Origin" elementType="Header">
+            <stringProp name="Header.name">Origin</stringProp>
+            <stringProp name="Header.value">https://www.flipkart.com</stringProp>
+          </elementProp>
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">*/*</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36</stringProp>
+          </elementProp>
+          <elementProp name="X-user-agent" elementType="Header">
+            <stringProp name="Header.name">X-user-agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36 FKUA/website/41/website/Desktop</stringProp>
+          </elementProp>
+          <elementProp name="Accept-Language" elementType="Header">
+            <stringProp name="Header.name">Accept-Language</stringProp>
+            <stringProp name="Header.value">en-US,en;q=0.9,hi;q=0.8</stringProp>
+          </elementProp>
+          <elementProp name="Accept-Encoding" elementType="Header">
+            <stringProp name="Header.name">Accept-Encoding</stringProp>
+            <stringProp name="Header.value">gzip, deflate, br</stringProp>
+          </elementProp>
+          <elementProp name="Content-Type" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">www.flipkart.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.flipkart.com/api/4/discover/autosuggest" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;query&quot;:&quot;M&quot;,&quot;contextUri&quot;:&quot;/&quot;,&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;types&quot;:[&quot;QUERY&quot;,&quot;QUERY_STORE&quot;,&quot;PRODUCT&quot;,&quot;RICH&quot;,&quot;PARTITION&quot;],&quot;rows&quot;:10,&quot;userTimeStamp&quot;:1547686047162,&quot;searchBrowseHistory&quot;:[{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+3&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=0&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863859481},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+&amp;otracker=AS_Query_HistoryAutoSuggest_1_0&amp;otracker1=AS_Query_HistoryAutoSuggest_1_0&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=1&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863854415},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band&amp;sid=ajy%2Cq7p&amp;as=on&amp;as-show=on&amp;otracker=AS_QueryStore_HistoryAutoSuggest_2_0&amp;otracker1=AS_QueryStore_HistoryAutoSuggest_2_0&amp;as-pos=2&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863840682}]}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/4/discover/autosuggest</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://www.flipkart.com/</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.flipkart.com/api/4/discover/autosuggest" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;query&quot;:&quot;Mi&quot;,&quot;contextUri&quot;:&quot;/&quot;,&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;types&quot;:[&quot;QUERY&quot;,&quot;QUERY_STORE&quot;,&quot;PRODUCT&quot;,&quot;RICH&quot;,&quot;PARTITION&quot;],&quot;rows&quot;:10,&quot;userTimeStamp&quot;:1547686047891,&quot;searchBrowseHistory&quot;:[{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+3&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=0&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863859481},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+&amp;otracker=AS_Query_HistoryAutoSuggest_1_0&amp;otracker1=AS_Query_HistoryAutoSuggest_1_0&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=1&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863854415},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band&amp;sid=ajy%2Cq7p&amp;as=on&amp;as-show=on&amp;otracker=AS_QueryStore_HistoryAutoSuggest_2_0&amp;otracker1=AS_QueryStore_HistoryAutoSuggest_2_0&amp;as-pos=2&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863840682}]}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/4/discover/autosuggest</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://www.flipkart.com/</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">728</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.flipkart.com/api/4/discover/autosuggest" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;query&quot;:&quot;Mi b&quot;,&quot;contextUri&quot;:&quot;/&quot;,&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;types&quot;:[&quot;QUERY&quot;,&quot;QUERY_STORE&quot;,&quot;PRODUCT&quot;,&quot;RICH&quot;,&quot;PARTITION&quot;],&quot;rows&quot;:10,&quot;userTimeStamp&quot;:1547686048849,&quot;searchBrowseHistory&quot;:[{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+3&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=0&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863859481},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+&amp;otracker=AS_Query_HistoryAutoSuggest_1_0&amp;otracker1=AS_Query_HistoryAutoSuggest_1_0&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=1&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863854415},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band&amp;sid=ajy%2Cq7p&amp;as=on&amp;as-show=on&amp;otracker=AS_QueryStore_HistoryAutoSuggest_2_0&amp;otracker1=AS_QueryStore_HistoryAutoSuggest_2_0&amp;as-pos=2&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863840682}]}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/4/discover/autosuggest</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://www.flipkart.com/</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">958</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.flipkart.com/api/3/data/collector/business" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">[{&quot;nc&quot;:{&quot;pn&quot;:&quot;Homepage&quot;,&quot;pt&quot;:&quot;Homepage&quot;,&quot;mpid&quot;:null,&quot;iid&quot;:&quot;kyc4ld82rk0000001547685999102&quot;,&quot;fm&quot;:&quot;organic&quot;},&quot;e&quot;:[{&quot;en&quot;:&quot;DCI&quot;,&quot;iid&quot;:&quot;M_2bb752f2-25b8-4efd-b789-5bd3dd52d593_1.DKNOW5P0OG3D&quot;,&quot;ct&quot;:&quot;bannerAdCard&quot;,&quot;p&quot;:&quot;1&quot;,&quot;t&quot;:1547686047517,&quot;st&quot;:1547686037907,&quot;f&quot;:true,&quot;pv&quot;:89}]}]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/3/data/collector/business</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://www.flipkart.com/</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">177</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.flipkart.com/api/4/discover/autosuggest" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;query&quot;:&quot;Mi ba&quot;,&quot;contextUri&quot;:&quot;/&quot;,&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;types&quot;:[&quot;QUERY&quot;,&quot;QUERY_STORE&quot;,&quot;PRODUCT&quot;,&quot;RICH&quot;,&quot;PARTITION&quot;],&quot;rows&quot;:10,&quot;userTimeStamp&quot;:1547686049163,&quot;searchBrowseHistory&quot;:[{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+3&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=0&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863859481},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+&amp;otracker=AS_Query_HistoryAutoSuggest_1_0&amp;otracker1=AS_Query_HistoryAutoSuggest_1_0&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=1&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863854415},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band&amp;sid=ajy%2Cq7p&amp;as=on&amp;as-show=on&amp;otracker=AS_QueryStore_HistoryAutoSuggest_2_0&amp;otracker1=AS_QueryStore_HistoryAutoSuggest_2_0&amp;as-pos=2&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863840682}]}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/4/discover/autosuggest</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://www.flipkart.com/</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">139</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.flipkart.com/api/4/discover/autosuggest" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;query&quot;:&quot;Mi ban&quot;,&quot;contextUri&quot;:&quot;/&quot;,&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;types&quot;:[&quot;QUERY&quot;,&quot;QUERY_STORE&quot;,&quot;PRODUCT&quot;,&quot;RICH&quot;,&quot;PARTITION&quot;],&quot;rows&quot;:10,&quot;userTimeStamp&quot;:1547686049425,&quot;searchBrowseHistory&quot;:[{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+3&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=0&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863859481},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+&amp;otracker=AS_Query_HistoryAutoSuggest_1_0&amp;otracker1=AS_Query_HistoryAutoSuggest_1_0&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=1&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863854415},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band&amp;sid=ajy%2Cq7p&amp;as=on&amp;as-show=on&amp;otracker=AS_QueryStore_HistoryAutoSuggest_2_0&amp;otracker1=AS_QueryStore_HistoryAutoSuggest_2_0&amp;as-pos=2&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863840682}]}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/4/discover/autosuggest</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://www.flipkart.com/</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">262</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.flipkart.com/api/4/discover/autosuggest" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;query&quot;:&quot;Mi band&quot;,&quot;contextUri&quot;:&quot;/&quot;,&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;types&quot;:[&quot;QUERY&quot;,&quot;QUERY_STORE&quot;,&quot;PRODUCT&quot;,&quot;RICH&quot;,&quot;PARTITION&quot;],&quot;rows&quot;:10,&quot;userTimeStamp&quot;:1547686049939,&quot;searchBrowseHistory&quot;:[{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+3&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=0&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863859481},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+&amp;otracker=AS_Query_HistoryAutoSuggest_1_0&amp;otracker1=AS_Query_HistoryAutoSuggest_1_0&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=1&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863854415},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band&amp;sid=ajy%2Cq7p&amp;as=on&amp;as-show=on&amp;otracker=AS_QueryStore_HistoryAutoSuggest_2_0&amp;otracker1=AS_QueryStore_HistoryAutoSuggest_2_0&amp;as-pos=2&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863840682}]}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/4/discover/autosuggest</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://www.flipkart.com/</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">513</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.flipkart.com/api/4/discover/autosuggest" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;query&quot;:&quot;Mi band 4&quot;,&quot;contextUri&quot;:&quot;/&quot;,&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;types&quot;:[&quot;QUERY&quot;,&quot;QUERY_STORE&quot;,&quot;PRODUCT&quot;,&quot;RICH&quot;,&quot;PARTITION&quot;],&quot;rows&quot;:10,&quot;userTimeStamp&quot;:1547686050813,&quot;searchBrowseHistory&quot;:[{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+3&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=0&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863859481},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band+&amp;otracker=AS_Query_HistoryAutoSuggest_1_0&amp;otracker1=AS_Query_HistoryAutoSuggest_1_0&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=1&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863854415},{&quot;marketPlaceId&quot;:&quot;FLIPKART&quot;,&quot;uri&quot;:&quot;/search?q=mi+band&amp;sid=ajy%2Cq7p&amp;as=on&amp;as-show=on&amp;otracker=AS_QueryStore_HistoryAutoSuggest_2_0&amp;otracker1=AS_QueryStore_HistoryAutoSuggest_2_0&amp;as-pos=2&amp;as-type=HISTORY&quot;,&quot;timestamp&quot;:1541863840682}]}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/4/discover/autosuggest</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://www.flipkart.com/</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">872</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.flipkart.com/api/4/page/fetch" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;pageUri&quot;:&quot;/search?q=Mi%20band%204&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&quot;,&quot;pageContext&quot;:{&quot;paginatedFetch&quot;:false,&quot;pageNumber&quot;:1,&quot;fetchSeoData&quot;:true},&quot;requestContext&quot;:{&quot;type&quot;:&quot;BROWSE_PAGE&quot;,&quot;ssid&quot;:&quot;ls4xksfj8g0000001547686052598&quot;,&quot;sqid&quot;:&quot;pzm53b08s00000001547686052598&quot;}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/4/page/fetch</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://www.flipkart.com/search?q=Mi%20band%204&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">1791</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.flipkart.com/api/3/data/collector/business" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">[{&quot;nc&quot;:{&quot;pn&quot;:&quot;Homepage&quot;,&quot;pt&quot;:&quot;Homepage&quot;,&quot;mpid&quot;:null,&quot;iid&quot;:&quot;kyc4ld82rk0000001547685999102&quot;,&quot;fm&quot;:&quot;SEARCH&quot;,&quot;sqid&quot;:&quot;pzm53b08s00000001547686052598&quot;,&quot;ssid&quot;:&quot;ls4xksfj8g0000001547686052598&quot;},&quot;e&quot;:[{&quot;en&quot;:&quot;SC&quot;,&quot;st&quot;:&quot;textual&quot;,&quot;s&quot;:&quot;Text&quot;,&quot;ssid&quot;:&quot;ls4xksfj8g0000001547686052598&quot;,&quot;t&quot;:1547686052598},{&quot;en&quot;:&quot;S&quot;,&quot;pat&quot;:&quot;SEARCH&quot;,&quot;sqid&quot;:&quot;pzm53b08s00000001547686052598&quot;,&quot;t&quot;:1547686052599},{&quot;en&quot;:&quot;DCI&quot;,&quot;iid&quot;:&quot;M_2bb752f2-25b8-4efd-b789-5bd3dd52d593_1.IM19FAIHAV13&quot;,&quot;ct&quot;:&quot;bannerAdCard&quot;,&quot;p&quot;:&quot;2&quot;,&quot;t&quot;:1547686052643,&quot;st&quot;:1547686047204,&quot;f&quot;:true,&quot;pv&quot;:89},{&quot;en&quot;:&quot;DCI&quot;,&quot;iid&quot;:&quot;M_2bb752f2-25b8-4efd-b789-5bd3dd52d593_2.LN62PHHMZ8EF&quot;,&quot;ct&quot;:&quot;rhsAnnouncement&quot;,&quot;p&quot;:&quot;1&quot;,&quot;t&quot;:1547686052643,&quot;st&quot;:1547685999039,&quot;f&quot;:true,&quot;pv&quot;:69},{&quot;en&quot;:&quot;DCI&quot;,&quot;iid&quot;:&quot;M_2bb752f2-25b8-4efd-b789-5bd3dd52d593_3.RQX36GED42ZO&quot;,&quot;ct&quot;:&quot;OfferCard&quot;,&quot;p&quot;:&quot;1&quot;,&quot;t&quot;:1547686052643,&quot;st&quot;:1547685999037,&quot;f&quot;:true,&quot;pv&quot;:62},{&quot;en&quot;:&quot;DCI&quot;,&quot;iid&quot;:&quot;M_2bb752f2-25b8-4efd-b789-5bd3dd52d593_3.50NJT9YNZ7S1&quot;,&quot;ct&quot;:&quot;OfferCard&quot;,&quot;p&quot;:&quot;2&quot;,&quot;t&quot;:1547686052643,&quot;st&quot;:1547685999037,&quot;f&quot;:true,&quot;pv&quot;:62},{&quot;en&quot;:&quot;DCI&quot;,&quot;iid&quot;:&quot;M_2bb752f2-25b8-4efd-b789-5bd3dd52d593_3.4KNS04T3940G&quot;,&quot;ct&quot;:&quot;OfferCard&quot;,&quot;p&quot;:&quot;3&quot;,&quot;t&quot;:1547686052643,&quot;st&quot;:1547685999037,&quot;f&quot;:true,&quot;pv&quot;:62},{&quot;en&quot;:&quot;DCI&quot;,&quot;iid&quot;:&quot;M_2bb752f2-25b8-4efd-b789-5bd3dd52d593_3.JWI6FM46FBWQ&quot;,&quot;ct&quot;:&quot;OfferCard&quot;,&quot;p&quot;:&quot;4&quot;,&quot;t&quot;:1547686052643,&quot;st&quot;:1547685999037,&quot;f&quot;:true,&quot;pv&quot;:62},{&quot;en&quot;:&quot;DCI&quot;,&quot;iid&quot;:&quot;M_2bb752f2-25b8-4efd-b789-5bd3dd52d593_3.H8AY6DYSAO0U&quot;,&quot;ct&quot;:&quot;OfferCard&quot;,&quot;p&quot;:&quot;5&quot;,&quot;t&quot;:1547686052643,&quot;st&quot;:1547685999037,&quot;f&quot;:true,&quot;pv&quot;:62},{&quot;en&quot;:&quot;DCI&quot;,&quot;iid&quot;:&quot;M_2bb752f2-25b8-4efd-b789-5bd3dd52d593_3.PJI2TZEHD7YY&quot;,&quot;ct&quot;:&quot;OfferCard&quot;,&quot;p&quot;:&quot;6&quot;,&quot;t&quot;:1547686052643,&quot;st&quot;:1547685999037,&quot;f&quot;:true,&quot;pv&quot;:62},{&quot;en&quot;:&quot;DWI&quot;,&quot;iid&quot;:&quot;M_2bb752f2-25b8-4efd-b789-5bd3dd52d593_3&quot;,&quot;t&quot;:1547686052643,&quot;st&quot;:1547685999039,&quot;f&quot;:true,&quot;pv&quot;:62},{&quot;en&quot;:&quot;DCI&quot;,&quot;iid&quot;:&quot;M_2bb752f2-25b8-4efd-b789-5bd3dd52d593_1.LTHV03ENNXYR&quot;,&quot;ct&quot;:&quot;bannerAdCard&quot;,&quot;p&quot;:&quot;3&quot;,&quot;t&quot;:1547686052643,&quot;st&quot;:1547686050497,&quot;f&quot;:true,&quot;pv&quot;:89},{&quot;en&quot;:&quot;RI&quot;,&quot;fid&quot;:&quot;kp37k1wjwg0000001547686053336&quot;,&quot;rid&quot;:&quot;bdebacba-ee0b-4b77-8654-dd4d730baaf2&quot;,&quot;tp&quot;:&quot;product&quot;,&quot;t&quot;:1547686053336},{&quot;en&quot;:&quot;RI&quot;,&quot;fid&quot;:&quot;d8qmnuhzi80000001547686053337&quot;,&quot;rid&quot;:&quot;bdebacba-ee0b-4b77-8654-dd4d730baaf2&quot;,&quot;tp&quot;:&quot;product&quot;,&quot;t&quot;:1547686053337},{&quot;en&quot;:&quot;RI&quot;,&quot;fid&quot;:&quot;o5hl1azj3k0000001547686053337&quot;,&quot;rid&quot;:&quot;c1bcfaff-5d0d-448f-a949-c5c8b3b25053&quot;,&quot;tp&quot;:&quot;product&quot;,&quot;t&quot;:1547686053337},{&quot;en&quot;:&quot;RI&quot;,&quot;fid&quot;:&quot;y2u3i989xc0000001547686053337&quot;,&quot;rid&quot;:&quot;c1bcfaff-5d0d-448f-a949-c5c8b3b25053&quot;,&quot;tp&quot;:&quot;product&quot;,&quot;t&quot;:1547686053337},{&quot;en&quot;:&quot;RI&quot;,&quot;fid&quot;:&quot;gl7uekzixc0000001547686053337&quot;,&quot;rid&quot;:&quot;bc181634-5a2d-46f9-8f0a-6320e3d04573&quot;,&quot;tp&quot;:&quot;product&quot;,&quot;t&quot;:1547686053337},{&quot;en&quot;:&quot;RI&quot;,&quot;fid&quot;:&quot;8n9jbwm4y80000001547686053337&quot;,&quot;rid&quot;:&quot;bc181634-5a2d-46f9-8f0a-6320e3d04573&quot;,&quot;tp&quot;:&quot;product&quot;,&quot;t&quot;:1547686053337}]}]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/3/data/collector/business</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://www.flipkart.com/search?q=Mi%20band%204&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">739</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.flipkart.com/api/3/data/collector/business" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">[{&quot;nc&quot;:{&quot;ppt&quot;:&quot;Homepage&quot;,&quot;ppn&quot;:&quot;Homepage&quot;,&quot;pn&quot;:&quot;Search&quot;,&quot;pt&quot;:&quot;SearchPage&quot;,&quot;mpid&quot;:&quot;FLIPKART&quot;,&quot;iid&quot;:&quot;kyc4ld82rk0000001547685999102&quot;,&quot;fm&quot;:&quot;SEARCH&quot;,&quot;sqid&quot;:&quot;pzm53b08s00000001547686052598&quot;,&quot;ssid&quot;:&quot;ls4xksfj8g0000001547686052598&quot;},&quot;e&quot;:[{&quot;en&quot;:&quot;PV&quot;,&quot;ib&quot;:false,&quot;id&quot;:false,&quot;t&quot;:1547686053342}]}]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/3/data/collector/business</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://www.flipkart.com/search?q=Mi%20band%204&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">1500</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
